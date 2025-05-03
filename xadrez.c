@@ -16,9 +16,18 @@ void MovBispo (int movimentos){
 }
 
 void MovRainha (int movimentos){
-    if(movimentos >0){
-        printf("Esquerda\n")
+    if(movimentos > 0){
+        printf("Esquerda\n");
         MovRainha(movimentos - 1);
+    }
+}
+
+void MovCavalo (int movimentos){
+    if(movimentos > 0 && movimentos == 3){
+        printf("Cima\n");
+        printf("Cima\n");
+        printf("Direita\n");
+        
     }
 }
 
@@ -33,39 +42,27 @@ int main() {
     MovBispo(5);
     printf("\n");
     
+    // Simulação do movimento da Rainha
+    printf("Movimento da Rainha\n");
+    MovRainha(8);
+    printf("\n");
 
-    int rainha_movimento = 8;
-    int cavalo_movimento = 3;
+    // Simulação do movimento do Cavalo 
+    printf("Movimento do Cavalo\n");
+    MovCavalo(3);
+    printf("\n");
     
    
-    printf("\n");
+   //Simulando moviemento do cavalo
 
-    // Simulação do movimento do Bispo
-    
-  
-    printf("\n");
-
-    // Simulação do movimento da Rainha
-    
-    printf("Movimento da Rainha:\n");
-    int k = 0;
-        
-    do {
-        printf("Esquerda\n");
-        k++;
-    } while (k < rainha_movimento);
-    printf("\n");
-
-    //Simulando moviemento do cavalo
-
-    for (int l = 1; l < cavalo_movimento; l++){
+    /*for (int l = 1; l < cavalo_movimento; l++){
         while (l < cavalo_movimento){
             printf("Baixo\n");
             l++;
         }
         printf("Esquerda\n");
       
-    }
+    }*/
 
     return 0;
 }
